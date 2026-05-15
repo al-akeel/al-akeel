@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>akill group</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+<div class="container"></div>
+
+
+  <!-- صور الخلفية الجانبية
+  <div class="side-img left"></div>
+  <div class="side-img right"></div> -->
+
+  <div class="wrapper">
+
+    <img class="store-img" src="STORE_IMAGE_URL" alt="صورة المحل">
+
+    <h1>عكيل للديكور</h1>
+
+    <p>حين تبحث عن الجودة فلن تجد أفضل من شركتنا التي تلبي احتياجاتك بأسعار منافسة وجودة متناهية</p>
+
+<div class="social-grid">
+
+  <!-- الصف الأول -->
+  <div class="first-row">
+    <div class="icon whatsapp" onclick="openWhatsAppModal()">
+  <i class="fab fa-whatsapp"></i>
+  <span>WhatsApp</span>
+</div>
+
+
+  <a href="https://www.instagram.com/al_akeel_for_decoration" target="_blank" class="icon instagram">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+
+ <a href="https://facebook.com" target="_blank" class="icon facebook">
+      <i class="fab fa-facebook-f"></i>
+      <span>Facebook</span>
+    </a>
+  </div>
+
+  <!-- الصف الثاني -->
+  <div class="second-row">
+  <a href="https://maps.google.com" target="_blank" class="icon location">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Location</span>
+    </a>
+
+    <a href="tel:+963966693832" class="icon phone">
+      <i class="fas fa-phone"></i>
+      <span>Call</span>
+    </a>
+  </div>
+
+</div>
+
+  <div id="whatsappModal" class="modal">
+    <div class="modal-content">
+      <h3>اختر طريقة التواصل</h3>
+
+      <a href="https://wa.me/963000000000" class="option-box" target="_blank">
+        <img src="images/whatsapp.png" class="option-icon">
+        <span>تواصل مع المندوب</span>
+      </a>
+
+      <a href="https://whatsapp.com/channel/0029Vb7jdSq6BIEoxznQww1s" class="option-box" target="_blank">
+        <img src="images/application.png" class="option-icon">
+        <span>قناة عرض المنتجات</span>
+      </a>
+
+      <div class="close-x" onclick="closeWhatsAppModal()">x</div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function openWhatsAppModal() {
+      document.getElementById("whatsappModal").style.display = "flex";
+    }
+
+    function closeWhatsAppModal() {
+      document.getElementById("whatsappModal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
