@@ -1,3 +1,4 @@
+/* الخلفية */
 .container {
   width: 100%;
   height: 100%;
@@ -6,7 +7,7 @@
   left: 0;
   z-index: 0;
 
-  --s: 30px; /* control the size */
+  --s: 30px;
 
   --c: #0000, #282828 0.5deg 119.5deg, #0000 120deg;
   --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
@@ -45,8 +46,7 @@ a:hover {
   color: #D4AF37;
 }
 
-
-/* الصندوق الرئيسي */
+/* الصندوق */
 .wrapper {
   position: relative;
   z-index: 2;
@@ -59,13 +59,6 @@ a:hover {
   box-shadow: 0 0 40px rgba(255,215,0,0.3), inset 0 0 20px rgba(255,215,0,0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,215,0,0.2);
-}
-.card {
-  background: rgba(0,0,0,0.6);
-  border-radius: 25px;
-  padding: 40px 30px;
-  box-shadow: 0 0 40px rgba(255,215,0,0.15), inset 0 0 20px rgba(255,215,0,0.1);
-  backdrop-filter: blur(10px);
 }
 
 .store-img {
@@ -87,150 +80,23 @@ p {
   line-height: 1.6;
 }
 
-/* أزرار */
-.icon-box {
-  width: 110px;
-  height: 110px;
-  background: #D4AF37;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  cursor: pointer;
-  transition: 0.25s ease;
-  animation: fadeIn 0.6s ease forwards;
-}
-
-.icon-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
-}
-
-.icon-img {
-  width: 50%;
-  height: 50%;
-}
-
-.icon-text {
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  opacity: 0;
-  animation: fadeIn 0.6s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* صورة الموقع */
-
-
-/* نافذة الواتساب */
-.modal {
-  display: none;
-  position: fixed; /* لازم fixed */
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-}
-
-
-.modal-content {
-  background: rgba(255,215,0,0.7);
-  padding: 20px;
-  width: 80%;
-  max-width: 300px;
-  border-radius: 10px;
-  text-align: center;
-  animation: fadeIn 0.3s;
-  position: relative
-}
-
-.option-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #5b5e34;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #000;
-  font-size: 16px;
-  transition: 0.2s;
-}
-
-.option-box:hover {
-  background: #f2f2f2(255,215,0,0.7);
-}
-
-.option-icon {
-  width: 35px;
-  height: 35px;
-}
-
-
-
-.close-x {
-  position: absolute;
-  top: 10px;     /* من فوق */
-  right: 10px;   /* من اليمين */
-  background: rgba(0,0,0,0.4);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.3s;
-  z-index: 99999;
-}
-
-.close-x:hover {
-  background: rgba(0,0,0,0.7);
-  transform: scale(1.1);
-}
-
-
+/* الشبكة */
 .social-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px; /* المسافة بين الصفين نفس المسافة بين الأزرار */
+  gap: 40px;
   margin: 0 auto;
 }
 
-/* الصف الأول */
-.first-row {
-  display: flex;
-  justify-content: center;
-  gap: 40px; /* المسافة بين الأزرار */
-}
-
-/* الصف الثاني */
+.first-row,
 .second-row {
   display: flex;
   justify-content: center;
-  gap: 40px; /* نفس البعد بين الأزرار */
-  margin: 0 auto;
+  gap: 40px;
 }
 
-/* الأزرار */
+/* الأيقونات */
 .icon {
   position: relative;
   width: 100px;
@@ -268,8 +134,57 @@ p {
 
 .social-grid .icon:hover span {
   opacity: 1;
-  transform: translateY(0);}
-  /* موبايل */
+  transform: translateY(0);
+}
+
+/* نافذة الواتساب */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgba(255,215,0,0.7);
+  padding: 20px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.3s;
+  position: relative;
+}
+
+.close-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.4);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-x:hover {
+  background: rgba(0,0,0,0.7);
+  transform: scale(1.1);
+}
+
+/* موبايل */
 @media (max-width: 600px) {
 
   .icon {
@@ -293,6 +208,7 @@ p {
     padding: 5px 10px;
   }
 }
+
 /* تابلت */
 @media (max-width: 900px) {
   .icon {
@@ -301,5 +217,3 @@ p {
     font-size: 32px;
   }
 }
-
-
