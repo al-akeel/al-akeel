@@ -269,4 +269,37 @@ p {
 .social-grid .icon:hover span {
   opacity: 1;
   transform: translateY(0);
+  /* موبايل */
+@media (max-width: 600px) {
+
+  .icon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .social-grid {
+    gap: 25px;
+  }
+
+  .first-row,
+  .second-row {
+    gap: 25px;
+  }
+
+  .social-grid .icon span {
+    bottom: -30px;
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+/* تابلت */
+@media (max-width: 900px) {
+  .icon {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+}
+
 }
