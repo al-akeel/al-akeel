@@ -268,7 +268,7 @@ p {
 
 .social-grid .icon:hover span {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0);}
   /* موبايل */
 @media (max-width: 600px) {
 
@@ -302,4 +302,4 @@ p {
   }
 }
 
-}
+
