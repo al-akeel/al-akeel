@@ -3,69 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>akill group</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- إعدادات المشاركة (لتظهر كبطاقة أنيقة عند إرسال الرابط في واتساب أو فيسبوك) -->
+  <meta property="og:title" content="عكيل للديكور | Akill Group">
+  <meta property="og:description" content="حين تبحث عن الجودة فلن تجد أفضل من شركتنا التي تلبي احتياجاتك بأسعار منافسة.">
+  <meta property="og:image" content="STORE_IMAGE_URL"> <!-- سيظهر الشعار هنا بعد إضافته -->
+  <meta property="og:type" content="website">
 
+  <title>عكيل للديكور | Akill Group</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-<div class="container"></div>
+  <div class="container"></div>
 
-
-  <!-- صور الخلفية الجانبية
-  <div class="side-img left"></div>
-  <div class="side-img right"></div> -->
-
+  <!-- بداية الصندوق الرئيسي -->
   <div class="wrapper">
+    
+    <img src="images/page.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(8px) brightness(0.3); -webkit-filter: blur(8px) brightness(0.3); z-index: -1; pointer-events: none;" alt="خلفية">
+    
+    <img src="images/photo.jpg" style="width: 100%; height: 420px; border-radius: 15px; object-fit: cover; border: 2px solid #edc967; margin-bottom: 20px; position: relative; z-index: 1;" alt="صورة المحل">
+    <h1>العكيل للديكور</h1>
 
-    <img class="store-img" src="STORE_IMAGE_URL" alt="صورة المحل">
+    <p>كافة التجهيزات المحلات التجارية </p>
+    <p><b>• جودة عالية • اسعار منافسة • جملة ومفرق </b></p>
 
-    <h1>عكيل للديكور</h1>
+    <!-- شبكة الأزرار -->
+    <div class="social-grid">
+      <!-- الصف الأول -->
+      <div class="first-row">
+        <div class="icon whatsapp" onclick="openWhatsAppModal()">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </div>
 
-    <p>حين تبحث عن الجودة فلن تجد أفضل من شركتنا التي تلبي احتياجاتك بأسعار منافسة وجودة متناهية</p>
+        <a href="https://www.instagram.com/alakeel_for_decoration?igsh=MWo5dzFyM2hybjNyMQ==" target="_blank" class="icon instagram">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
 
-<div class="social-grid">
+        <a href="https://www.facebook.com/share/1P6EM8FYB6/?mibextid=wwXIfr" target="_blank" class="icon facebook">
+          <i class="fab fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+      </div>
 
-  <!-- الصف الأول -->
-  <div class="first-row">
-    <div class="icon whatsapp" onclick="openWhatsAppModal()">
-  <i class="fab fa-whatsapp"></i>
-  <span>WhatsApp</span>
-</div>
+      <!-- الصف الثاني -->
+      <div class="second-row">
+        <a href="https://maps.google.com/maps?q=36.210208,37.157265&ll=36.210208,37.157265&z=16" target="_blank" class="icon location">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Location</span>
+        </a>
+
+        <a href="tel:+963966693832" class="icon phone">
+          <i class="fas fa-phone"></i>
+          <span>Call</span>
+        </a>
+      </div>
+    </div> <!-- نهاية شبكة الأزرار (social-grid) -->
+
+  </div> <!-- نهاية الصندوق الرئيسي (wrapper) - هذا هو السطر الذي أضفناه ليحرر النافذة! -->
 
 
-  <a href="https://www.instagram.com/al_akeel_for_decoration" target="_blank" class="icon instagram">
-      <i class="fab fa-instagram"></i>
-      <span>Instagram</span>
-    </a>
-
- <a href="https://facebook.com" target="_blank" class="icon facebook">
-      <i class="fab fa-facebook-f"></i>
-      <span>Facebook</span>
-    </a>
-  </div>
-
-  <!-- الصف الثاني -->
-  <div class="second-row">
-  <a href="https://maps.google.com" target="_blank" class="icon location">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Location</span>
-    </a>
-
-    <a href="tel:+963966693832" class="icon phone">
-      <i class="fas fa-phone"></i>
-      <span>Call</span>
-    </a>
-  </div>
-
-</div>
-
+  <!-- نافذة الواتساب المنبثقة (الآن أصبحت خارج الصندوق تماماً ولن يتم قصها) -->
   <div id="whatsappModal" class="modal">
     <div class="modal-content">
       <h3>اختر طريقة التواصل</h3>
 
-      <a href="https://wa.me/963000000000" class="option-box" target="_blank">
+      <a href="https://wa.me/963945235660" class="option-box" target="_blank">
         <img src="images/whatsapp.png" class="option-icon">
         <span>تواصل مع المندوب</span>
       </a>
@@ -80,14 +86,23 @@
   </div>
 
 
-
+  <!-- كود الجافاسكربت -->
   <script>
+    const modal = document.getElementById("whatsappModal");
+
     function openWhatsAppModal() {
-      document.getElementById("whatsappModal").style.display = "flex";
+      modal.style.display = "flex";
     }
 
     function closeWhatsAppModal() {
-      document.getElementById("whatsappModal").style.display = "none";
+      modal.style.display = "none";
+    }
+
+    // إغلاق النافذة المنبثقة عند الضغط في أي مكان فارغ خارجها
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeWhatsAppModal();
+      }
     }
   </script>
 
